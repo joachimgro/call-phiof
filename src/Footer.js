@@ -54,26 +54,22 @@ function Footer() {
             {isLocalAudioEnabled ? (
               <>
                 <FontAwesomeIcon
-                  icon={faMicrophone}
-                  size="4x"
-                  color="#A24936"
-                />
-                <span className="button_name">Mute</span>
-              </>
-            ) : (
-              <>
-                <FontAwesomeIcon
                   icon={faMicrophoneSlash}
                   size="4x"
                   color="#A24936"
                 />
                 <span className="button_name">Unmute</span>
               </>
+            ) : (
+              <>
+                <FontAwesomeIcon icon={faMicrophone} size="4x" color="white" />
+                <span className="button_name">Mute</span>
+              </>
             )}
           </div>
         </div>
 
-        <div className="main_controls_section">
+        {/* <div className="main_controls_section">
           <div className="main_controls_button">
             {isConnected && (
               <button
@@ -85,7 +81,7 @@ function Footer() {
               </button>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
