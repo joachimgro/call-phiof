@@ -1,33 +1,30 @@
-import { useState } from "react";
-import { useHMSActions } from "@100mslive/react-sdk";
-
+import { useState } from 'react'
+import { useHMSActions } from '@100mslive/react-sdk'
 
 function SignIn() {
-	
-    const hmsActions = useHMSActions();
-    const [inputValues, setInputValues] = useState({
-        name: "",
-        token: ""
-    });
+  const hmsActions = useHMSActions()
+  const [inputValues, setInputValues] = useState({
+    name: '',
+    token: '',
+  })
 
-    const handleInputChange = (e) => {
-        setInputValues((prevValues) => ({
-            ...prevValues,
-            [e.target.name]: e.target.value
-        }));
-    }
+  const handleInputChange = (e) => {
+    setInputValues((prevValues) => ({
+      ...prevValues,
+      [e.target.name]: e.target.value,
+    }))
+  }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        hmsActions.join({
-            userName: inputValues.name,
-            authToken: inputValues.token
-        });
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    hmsActions.join({
+      userName: inputValues.name,
+      authToken: inputValues.token,
+    })
+  }
 
-
-    return (
-        <form onSubmit={handleSubmit}>
+  return (
+    <form onSubmit={handleSubmit}>
       <h2 className="meeting-title">Join Meeting</h2>
       <div className="input-container">
         <input
@@ -53,7 +50,7 @@ function SignIn() {
       </div>
       <button className="btn-signin">Join</button>
     </form>
-    )
+  )
 }
 
-export default SignIn;
+export default SignIn

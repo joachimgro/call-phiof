@@ -1,8 +1,8 @@
 {
-  "name": "zoom-clone",
+  "name": "call-phiof",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://daacode.github.io/zoom-clone",
+  "homepage": "https://github.com/joachimgro/call-phiof.git",
   "dependencies": {
     "@100mslive/react-sdk": "^0.6.4",
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
