@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useAVToggle } from '@100mslive/react-sdk'
 import {
   selectIsConnectedToRoom,
@@ -53,17 +53,17 @@ function Footer() {
           <div className="main_controls_button" onClick={toggleAudio}>
             {isLocalAudioEnabled ? (
               <>
+                <FontAwesomeIcon icon={faMicrophone} size="4x" color="white" />
+                <span className="button_name">Mute</span>
+              </>
+            ) : (
+              <>
                 <FontAwesomeIcon
                   icon={faMicrophoneSlash}
                   size="4x"
                   color="#A24936"
                 />
                 <span className="button_name">Unmute</span>
-              </>
-            ) : (
-              <>
-                <FontAwesomeIcon icon={faMicrophone} size="4x" color="white" />
-                <span className="button_name">Mute</span>
               </>
             )}
           </div>

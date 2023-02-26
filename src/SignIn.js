@@ -20,6 +20,10 @@ function SignIn() {
     hmsActions.join({
       userName: inputValues.name,
       authToken: inputValues.token,
+      settings: {
+        isAudioMuted: true,
+      },
+      rememberDeviceSelection: true,
     })
   }
 
